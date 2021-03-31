@@ -4,7 +4,7 @@ import emptyMovie from './components/emptyMovie';
 
 class OMDB {
   term;
-  apiUrl = 'http://www.omdbapi.com/?apikey=591cae26';
+  apiUrl = 'https://www.omdbapi.com/?apikey=591cae26';
   cover = $('.js-cover');
   searchInput = $('.js-search-input');
   moreButton = $('.js-list-view-button');
