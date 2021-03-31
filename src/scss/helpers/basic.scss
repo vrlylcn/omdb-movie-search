@@ -1,0 +1,142 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $color-text;
+  background-color: $background-base;
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
+p {
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  color: inherit;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: inherit;
+}
+
+img {
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre,
+fieldset,
+ul,
+ol,
+menu,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input,
+textarea,
+select,
+button,
+fieldset,
+iframe {
+  border: 0;
+  border-radius: 0;
+}
+
+label {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+fieldset,
+nav ul,
+nav ol,
+button,
+menu {
+  padding: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+:focus {
+  outline: none;
+}
+
+.clear::after,
+.clear::before {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+::-moz-selection {
+  color: $color-cursor-selection;
+  background: $background-cursor-selection;
+}
+
+::selection {
+  color: $color-cursor-selection;
+  background: $background-cursor-selection;
+}
+

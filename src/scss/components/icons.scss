@@ -1,0 +1,12 @@
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  width: inherit;
+  height: inherit;
+  color: inherit;
+}
