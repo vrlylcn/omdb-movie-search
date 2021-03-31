@@ -45,10 +45,18 @@ class OMDB {
   }
 
   apiSearch(url) {
-    return $.ajax({
-      url: url,
-      type: 'GET',
-      dataType: 'json'
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: url,
+        type: 'GET',
+        dataType: 'json',
+        success(result) {
+          return resolve(result);
+        },
+        error(err) {
+          return reject(err);
+        }
+      });
     });
   }
 }
