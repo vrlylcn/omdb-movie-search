@@ -13,4 +13,4 @@ Start Server
     npm run dev
 
 
-![alt text](https://github.com/vrlylcn/omdb-movie-search/blob/master/e65e1f02-b764-4a55-9c75-16bd677c804f.png?raw=true)
+![alt text](https://github.com/vrlylcn/omdb-movie-search/blob/master/e65e1f02-b764-4a55-9c75-16bd677c804f.gif?raw=true)
