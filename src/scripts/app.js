@@ -8,7 +8,7 @@ $(() => {
   searchInput.focus();
 
   searchInput.on('input', () => {
-    debounce(new OMDB(), 1000);
+    debounce(new OMDB().init(), 1000);
   });
 
   $(document).on('submit', '.js-search-form', (e) => {
@@ -17,5 +17,6 @@ $(() => {
 
   $(document).on('click', '.js-list-view-button', (e) => {
     e.preventDefault();
+    new OMDB().list();
   });
 });

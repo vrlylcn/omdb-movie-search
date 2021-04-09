@@ -11,7 +11,7 @@ export default function (item) {
 
   return `
     <div class="movie">
-      <picture class="movie__picture">
+      <picture class="movie__picture loading">
         <img src="${
           item.Poster !== 'N/A'
             ? item.Poster

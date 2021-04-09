@@ -1,0 +1,38 @@
+.list {
+  display: none;
+  position: relative;
+  top: 5px;
+
+  &.active {
+    top: 0;
+    transition: all 250ms;
+  }
+
+  &__inner {
+
+  }
+
+  &__empty-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .movie {
+      width: calc(50% - 20px);
+    }
+  }
+
+  &__results {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .movie {
+      width: calc(50% - 30px);
+    }
+  }
+}

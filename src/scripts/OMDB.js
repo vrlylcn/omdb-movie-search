@@ -10,7 +10,11 @@ class OMDB {
   moreButton = $('.js-list-view-button');
   coverResultItems = $('.js-cover-result-items');
 
-  constructor() {
+  searchList = $('.js-search-list');
+  listEmptyRow = $('.js-list-empty-row');
+  listResultItems = $('.js-list-results');
+
+  init() {
     this.term = this.searchInput.val().trim();
 
     if (this.term.length > 2) {
@@ -56,6 +60,21 @@ class OMDB {
         error(err) {
           return reject(err);
         }
+      });
+    });
+  }
+
+  list() {
+    this.cover.hide();
+    this.searchList.show();
+    this.term = this.searchInput.val().trim();
+    this.apiSearch(`${this.apiUrl}&s=${this.term}`).then((response) => {
+      this.listEmptyRow.hide();
+
+      response.Search.map((item) => {
+        this.apiSearch(`${this.apiUrl}&i=${item.imdbID}`).then((response) => {
+          this.listResultItems.append(movie(response));
+        });
       });
     });
   }
