@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import movie from './components/movie';
 import emptyMovie from './components/emptyMovie';
 

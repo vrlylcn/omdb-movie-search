@@ -1,16 +1,17 @@
 const path = require('path');
 const webpack = require('webpack');
-const port = process.env.DEV_SERVER || 3000;
+
 const webpackDevServer = require('webpack-dev-server');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const FriendlyErrors = require('friendly-errors-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const isDev = process.env.NODE_ENV !== 'production';
 
+const port = process.env.DEV_SERVER || 3000;
+const isDev = process.env.NODE_ENV !== 'production';
 const webpackConfig = {
-  entry: path.resolve(__dirname, './src/scripts/app.js'),
+  entry: path.resolve(__dirname, './src/scripts/App.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.min.js'
@@ -89,6 +90,7 @@ const devServerConfig = {
 const compiler = webpack(webpackConfig, () => console.log());
 
 if (isDev) {
+  // eslint-disable-next-line new-cap
   const server = new webpackDevServer(compiler, devServerConfig);
   server.listen(port, 'localhost');
 }

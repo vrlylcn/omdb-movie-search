@@ -1,4 +1,4 @@
-export default function () {
+function EmptyMove() {
   return `
     <div class="movie movie--empty">
       <picture class="movie__picture loading"></picture>
@@ -17,3 +17,5 @@ export default function () {
     </div>
   `;
 }
+
+export default EmptyMove;

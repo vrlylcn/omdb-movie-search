@@ -8,6 +8,7 @@
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
     "no-console": "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "no-underscore-dangle": "off"
   }
 }
